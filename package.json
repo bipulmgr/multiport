@@ -7,6 +7,11 @@
   "module": "src/index.tsx",
   "scripts": {
     "dev": "bun --hot src/index.tsx",
+    "dev:multi": "bun src/multi-port.ts",
+    "dev:ports": "bun src/multi-port.ts --default",
+    "dev:config": "bun src/multi-port-config.ts",
+    "dev:testing": "bun src/multi-port-config.ts --profile testing",
+    "dev:staging": "bun src/multi-port-config.ts --profile staging",
     "start": "NODE_ENV=production bun src/index.tsx",
     "build": "bun run build.ts"
   },

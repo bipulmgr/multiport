@@ -1,0 +1,15 @@
+{
+  "defaultPorts": [3000, 3001, 3002, 3003],
+  "development": {
+    "ports": [3000, 3001, 3002, 3003],
+    "description": "Development servers with hot reloading"
+  },
+  "testing": {
+    "ports": [4000, 4001, 4002],
+    "description": "Testing servers for different test scenarios"
+  },
+  "staging": {
+    "ports": [5000, 5001],
+    "description": "Staging servers for pre-production testing"
+  }
+}

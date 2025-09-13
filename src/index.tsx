@@ -1,7 +1,11 @@
 import { serve } from "bun";
 import index from "./index.html";
 
+// Get port from environment variable or use default
+const port = parseInt(process.env.PORT || "3000", 10);
+
 const server = serve({
+  port,
   routes: {
     // Serve index.html for all unmatched routes.
     "/*": index,
@@ -11,12 +15,14 @@ const server = serve({
         return Response.json({
           message: "Hello, world!",
           method: "GET",
+          port: port,
         });
       },
       async PUT(req) {
         return Response.json({
           message: "Hello, world!",
           method: "PUT",
+          port: port,
         });
       },
     },
@@ -25,6 +31,7 @@ const server = serve({
       const name = req.params.name;
       return Response.json({
         message: `Hello, ${name}!`,
+        port: port,
       });
     },
   },
@@ -38,4 +45,4 @@ const server = serve({
   },
 });
 
-console.log(`🚀 Server running at ${server.url}`);
+console.log(`🚀 Server running at ${server.url} (Port: ${port})`);
