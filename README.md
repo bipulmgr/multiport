@@ -1,5 +1,5 @@
 # bun-react-tailwind-template
-adasdasdasd
+
 To install dependencies:
 
 ```bash
